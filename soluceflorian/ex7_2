@@ -1,0 +1,38 @@
+main()
+
+{
+ int A[50]; 
+ int N;     
+ int I;     
+ int MIN;   
+ int MAX;   
+
+ printf("Dimension du tableau (max.50) : ");
+ 
+ scanf("%d", &N );
+ for (I=0; I<N; I++)
+    {
+     printf("Elément %d : ", I);
+     scanf("%d", &A[I]);
+    }
+
+ printf("Tableau donné :\n");
+ 
+ for (I=0; I<N; I++)
+     printf("%d ", A[I]);
+ 
+ printf("\n");
+ MIN=0;
+ MAX=0;
+ for (I=0; I<N; I++)
+     {
+      if(A[I]>A[MAX]) MAX=I;
+      if(A[I]<A[MIN]) MIN=I;
+     }
+
+ printf("Position du minimum : %d\n", MIN);
+ printf("Position du maximum : %d\n", MAX);
+ printf("Valeur   du minimum : %d\n", A[MIN]);
+ printf("Valeur   du maximum : %d\n", A[MAX]);
+ return 0;
+}
