@@ -1,0 +1,16 @@
+Algorithme parfaits
+  Variables
+    i, n, s, j : Entier
+Début
+  Pour i de 1 à 100 Faire
+    s<-- 0
+    Pour j de 1 à (i Div 2) Faire
+      Si((i Mod j) = 0) Alors
+        s <-- s + j
+      FinSi
+    FinPour
+    Si(s = i) Alors
+      Ecrire(i,” est un nombre parfait”)
+    FinSi
+  FinPour
+Fin
