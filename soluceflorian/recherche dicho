@@ -1,0 +1,25 @@
+int rechercheDicho (int tab[], int nbVal, int val)
+{
+  bool trouve;  
+  int id;  
+  int ifin;  
+  int im;  
+  
+  trouve = false;  
+  id = 0;  
+  ifin = nbVal;  
+  
+  while(!trouve && ((ifin - id) > 1)){
+
+    im = (id + ifin)/2;  
+    
+    trouve = (tab[im] == val);  
+    
+    if(tab[im] > val) ifin = im;  
+    else id = im;  
+  }
+  
+  if(tab[id] == val) return(id);  
+  else return(-1);  
+  
+}
