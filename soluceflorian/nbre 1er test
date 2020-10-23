@@ -1,0 +1,20 @@
+int main()
+{
+    int nombre=1, compteur=0;
+    int i,r,n=100;
+
+    while(compteur<n){
+         r=0;
+         nombre++;
+         for (i=1 ; i<=nombre ; i++)
+         {
+             if ((nombre%i)==0) 
+                r++;
+         }
+         if(r==2)
+         {
+            printf(" %d \n",nombre);
+            compteur++;
+         }
+   }
+END

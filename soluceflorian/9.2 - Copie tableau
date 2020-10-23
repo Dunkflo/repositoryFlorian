@@ -1,0 +1,19 @@
+Var
+    T1,T2   : tableau [1..100] de réels ;
+    T   : tableau [1..200] de réels ;
+    N ,M,i:  entiers ;
+
+Debut
+    Si  (N=0)  et (M=0) alors
+        Ecrire(‘le tableau est vide ‘) ;
+    Sinon
+        Pour i <--  1 à N Faire
+        T[i] <--  T1[i] ;
+        Finpour i
+        
+        Pour i <--  1 à M Faire
+        T[N+i] <--  T2[i] ;
+        Finpour i
+
+    Finsi
+Fin

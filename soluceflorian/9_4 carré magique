@@ -1,0 +1,35 @@
+nbCases = int(input())
+carre = [[0] * nbCases for _ in range(nbCases)]
+ 
+carre = [list(map(int,input().split())) for lig in range(nbCases)]
+ 
+lignes,colonnes = [0] * nbCases, [0] * nbCases
+ 
+diag1, diag2 = 0,0
+ 
+for lig in range(nbCases) :
+   diag1 += carre[lig][lig]
+   diag2 += carre[lig][nbCases - 1 - lig]
+   for col in range(nbCases) : 
+      lignes[lig] += carre[lig][col]
+      colonnes[lig] += carre[col][lig]
+ 
+ 
+if lignes == colonnes and len(set(lignes)) == 1 and diag1 == diag2 == lignes[0] :
+   magique = True
+else :
+   magique = False
+ 
+ 
+ 
+verif = 0
+ 
+for nbre in range(1,nbCases**2 + 1) :
+   for lignes in carre :
+      if nbre in lignes :
+         verif += 1
+ 
+if magique and verif == nbCases**2 :
+   print('yes')
+else : 
+   print('no')
