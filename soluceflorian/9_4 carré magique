@@ -14,15 +14,13 @@ for lig in range(nbCases) :
       lignes[lig] += carre[lig][col]
       colonnes[lig] += carre[col][lig]
  
- 
-if lignes == colonnes and len(set(lignes)) == 1 and diag1 == diag2 == lignes[0] :
+ // attention ==> chaque fois que j'ai une somme égal à diagonale 
+ if lignes == colonnes and len(set(lignes)) == 1 and diag1 == diag2 == lignes[0] :
    magique = True
 else :
    magique = False
  
- 
- 
-verif = 0
+ verif = 0
  
 for nbre in range(1,nbCases**2 + 1) :
    for lignes in carre :
